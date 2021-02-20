@@ -1,6 +1,8 @@
 exifsort
 ========
 Dockerized version of:https://github.com/linucksrox/exifsort/blob/master/README.md
+
+
 exifsort organizes pictures and movies into a date-based directory hierarchy
 derived from the embedded EXIF data in the media files themselves.
 
@@ -30,7 +32,8 @@ So if you have a source directory like this...
 
 ...you can run exifsort like this...
 
-    $ exifsort --source ./source/ --destination ./target/
+    $ docker run -t -i -v "/hostdir":"/containerdir"  exiftool  -s /mnt/usb/<source> --dest /mnt/usb/<target>
+
 
 ...and the files will be moved to the target directory, which will then
 look like this:
