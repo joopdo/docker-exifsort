@@ -32,6 +32,8 @@ So if you have a source directory like this...
 
 ...you can run exifsort like this...
 
+    $ <clone this git>, navigate to root
+    $ docker build ./ -t 'exiftool:latest'
     $ docker run -t -i -v "/hostdir":"/containerdir"  exiftool  -s /mnt/usb/<source> --dest /mnt/usb/<target>
 
 
